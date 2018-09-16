@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CAIN</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Coda:800|Teko:700" rel="stylesheet">
+	<style>
+	#baack {position:absolute;}
+	#cainLogo img:hover{opacity:0.5;}
+	#backImgb {transition: 1s;}
+	#fontBox {transition:1s;}
+	#rockImg {transition:1s;}
+	</style>
+</head>
+<body>
+	<audio id="bgm" src = "BGM.mp3">
+	</audio>
+	<div id="baack">
+		<img id="backImgb" src="2ndJYKb.png" style="width:100%;" >
+	</div>
+	<div>
+		<img id="backImg" src="2ndJYK.png" style="width:100%;" >
+		<img id="rockImg" src="rockroll.png" style="position:fixed; top:150px; left: calc(50% - 450px); opacity:0;" >
+		<div id="fontBox" style="font-family: 'Teko', sans-serif; position:fixed; left:70px; top:10px; font-size:3em; color:white; line-height:1.5em">
+			<p>
+				 HANKYONG NATIONAL UNIVERSITY
+				<br>
+				 ROCK BAND
+			</p>
+		</div>
+		<div id="cainLogo" style="position:fixed; left:1280px; top:480px;">
+			
+			<img src="cain.png" style="width:170px;" >
+
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript">
+		var toggle = "off"
+		cainLogo.onclick = function(){
+			if(toggle == "off"){
+				toggle = "on"
+				backImgb.style.opacity = 0;
+				fontBox.style.opacity = 0;
+				rockImg.style.opacity = 1;
+				bgm.play();
+			}else if(toggle == "on"){
+				toggle = "off"
+				backImgb.style.opacity = 1;
+				fontBox.style.opacity = 1;
+				rockImg.style.opacity = 0;
+				bgm.pause();
+			}
+		}
+		
+	</script>
+</body>
+</html>
